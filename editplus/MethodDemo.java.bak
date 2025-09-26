@@ -1,0 +1,43 @@
+class MethodDemo 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+
+		MethodDemo m1=new MethodDemo();
+		m1.greet(); //method calling
+
+		MethodDemo m2=new MethodDemo();
+		m2.greet();
+
+		m1.displayName("rahul","m1");
+		m2.displayName("Simran","m2");
+
+		//String res=m1.otpGen();
+		System.out.println(m1.otpGen());
+	}
+
+	//type-1 no parameter, no return
+	public void greet()
+	{
+		System.out.println("Good Morning...");
+	}
+
+	//type-1 with parameter, no return
+	public void displayName(String name,String method)
+	{
+		System.out.println("Hello "+name + "-"+method);
+	}
+
+	//type-3 No parameter, retun
+	public String otpGen()
+	{
+		return "samosa";
+	}
+
+	//type-4 with parameter and return
+	public int sum(int a, int b)
+	{
+		return a+b;
+	}
+}
