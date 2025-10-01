@@ -1,11 +1,12 @@
+
 public class Ticket {
-    private int ticketId;
+   private int ticketId;
     private User user;
     private Train train;
     private int seatBooked;
-    private static int counter=1001;
+    private static int counter = 1001;
 
-    public Ticket(User user, Train train, int seatBooked) {
+    public Ticket( User user, Train train, int seatBooked) {
         this.ticketId = counter++;
         this.user = user;
         this.train = train;
@@ -53,8 +54,9 @@ public class Ticket {
     }
 
     @Override
-    public String toString() {return "Ticket ID: "+ticketId +
-            " | Train:"+train.getName()+" | Route:"+train.getSource()+" -> "+train.getDestination()+
-            "| Seats: "+seatBooked+" | Booked By: "+user.getFullName();
+    public String toString() {
+        return "Ticket ID: "+ticketId+
+                " | Train:"+train.getName()+" |Route:"+train.getSource()+" -> "+train.getDestination() +
+                " | Seats: "+seatBooked+" | Booked By: "+user.getFullName();
     }
 }
